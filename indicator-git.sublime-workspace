@@ -1,0 +1,1998 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+			[
+				"re",
+				"repository"
+			],
+			[
+				"form",
+				"formatExceptionInfo"
+			],
+			[
+				"iden",
+				"identifiant_client"
+			],
+			[
+				"co",
+				"colonne"
+			],
+			[
+				"log",
+				"log_id"
+			],
+			[
+				"qu",
+				"http_build_query"
+			],
+			[
+				"contole",
+				"Controle"
+			],
+			[
+				"interventio",
+				"intervention_vehicules"
+			],
+			[
+				"ctype",
+				"ctype_digit"
+			],
+			[
+				"func_",
+				"func_get_args"
+			],
+			[
+				"NOT",
+				"NOTE"
+			],
+			[
+				"IN",
+				"INSPECTEUR"
+			],
+			[
+				"PERIODI",
+				"PERDIODICITE"
+			],
+			[
+				"pa",
+				"param"
+			],
+			[
+				"incon",
+				"inconnu"
+			],
+			[
+				"inc",
+				"inconnue"
+			],
+			[
+				"demain",
+				"demain_matin"
+			],
+			[
+				"duree",
+				"duree_globale"
+			],
+			[
+				"nouve",
+				"nouveau_local"
+			],
+			[
+				"nouv",
+				"nouveau_local"
+			],
+			[
+				"error",
+				"error_reporting"
+			],
+			[
+				"mysql_er",
+				"mysql_error"
+			],
+			[
+				"livr",
+				"livraison_adresse"
+			],
+			[
+				"signatair",
+				"signataire_adresse"
+			],
+			[
+				"replace",
+				"replaceWith"
+			],
+			[
+				"mysql_in",
+				"mysql_insert_id"
+			],
+			[
+				"cLient",
+				"Client"
+			],
+			[
+				"R",
+				"REPERTOIRE_FICHIERS_JOINTS"
+			],
+			[
+				"message",
+				"message_ko"
+			],
+			[
+				"adherent",
+				"adherents_liste"
+			],
+			[
+				"esl",
+				"else"
+			],
+			[
+				"end",
+				"endif"
+			],
+			[
+				"formu",
+				"formulaire_utilisateur"
+			],
+			[
+				"mysql_nu",
+				"mysql_num_rows"
+			],
+			[
+				"mysql_re",
+				"mysql_real_escape_string"
+			],
+			[
+				"getM",
+				"getMonth"
+			],
+			[
+				"mysql_fe",
+				"mysql_fetch_assoc"
+			]
+		]
+	},
+	"buffers":
+	[
+		{
+			"file": "indicator-git.py",
+			"settings":
+			{
+				"buffer_size": 17607,
+				"line_ending": "Unix"
+			}
+		}
+	],
+	"build_system": "",
+	"command_palette":
+	{
+		"height": 75.0,
+		"selected_items":
+		[
+			[
+				"modi",
+				"HTML: Encode Special Characters"
+			],
+			[
+				"mod",
+				"Git: Open Modified Files"
+			],
+			[
+				"sql",
+				"Set Syntax: SQL"
+			],
+			[
+				"all",
+				"File: Save All"
+			],
+			[
+				"modif",
+				"Git: Open Modified Files"
+			],
+			[
+				"comm",
+				"Git: Commit"
+			],
+			[
+				"insta",
+				"Package Control: Install Package"
+			],
+			[
+				"modifi",
+				"Git: Open Modified Files"
+			],
+			[
+				"remove",
+				"Package Control: Remove Package"
+			],
+			[
+				"inst",
+				"Package Control: Install Package"
+			],
+			[
+				"remo",
+				"Package Control: Remove Package"
+			],
+			[
+				"diff",
+				"Git: Diff Tool Current File"
+			],
+			[
+				"git",
+				"Git: Diff Tool All"
+			],
+			[
+				"ins",
+				"Package Control: Install Package"
+			],
+			[
+				"upd",
+				"Package Control: Upgrade Package"
+			],
+			[
+				"log",
+				"Git: Log All"
+			],
+			[
+				"git diff",
+				"Git: Open Modified Files"
+			],
+			[
+				"instal",
+				"Package Control: Install Package"
+			],
+			[
+				"remov",
+				"Package Control: Remove Package"
+			],
+			[
+				"ope",
+				"Git: Open Modified Files"
+			],
+			[
+				"commit",
+				"Git: Commit"
+			],
+			[
+				"save all",
+				"File: Save All"
+			],
+			[
+				"saall",
+				"File: Save All"
+			],
+			[
+				"push",
+				"Git: Push Current Branch"
+			],
+			[
+				"pull",
+				"Git: Pull Current Branch"
+			],
+			[
+				"colo",
+				"Color picker"
+			],
+			[
+				"",
+				"Package Control: Install Package"
+			],
+			[
+				"in",
+				"Package Control: Install Package"
+			],
+			[
+				"pack",
+				"Preferences: Browse Packages"
+			],
+			[
+				"add",
+				"Git: Add..."
+			],
+			[
+				"col",
+				"Color picker"
+			],
+			[
+				"git bla",
+				"Git: Blame"
+			],
+			[
+				"mode",
+				"Git: Open Modified Files"
+			],
+			[
+				"termi",
+				"Preferences: Terminal Key Bindings – User"
+			],
+			[
+				"lin",
+				"SublimeLinter: Show Error List"
+			],
+			[
+				"LOW",
+				"Convert Case: Lower Case"
+			],
+			[
+				"LOWER",
+				"Convert Case: Lower Case"
+			],
+			[
+				"UPP",
+				"Convert Case: Upper Case"
+			],
+			[
+				"commen",
+				"Toggle Comment"
+			],
+			[
+				"tk",
+				"Git: Gitk"
+			],
+			[
+				"lo",
+				"Git: Log All"
+			],
+			[
+				"upp",
+				"Convert Case: Upper Case"
+			],
+			[
+				"gitgui",
+				"Git: Graph Current File"
+			],
+			[
+				"gitk",
+				"Git: Gitk"
+			],
+			[
+				"pul",
+				"Git: Pull Current Branch"
+			],
+			[
+				"git st",
+				"Git: Status"
+			],
+			[
+				"packins",
+				"Package Control: Install Package"
+			],
+			[
+				"packre",
+				"Package Control: Remove Package"
+			],
+			[
+				"intel",
+				"SublimeCodeIntel: Disable Plugin"
+			],
+			[
+				"git add",
+				"Git: Add Current File"
+			],
+			[
+				"git mo",
+				"Git: Open Modified Files"
+			],
+			[
+				"com",
+				"Git: Quick Commit"
+			],
+			[
+				"php",
+				"Set Syntax: PHP"
+			],
+			[
+				"java",
+				"Set Syntax: Java"
+			],
+			[
+				"pulcb",
+				"Git: Pull Current Branch"
+			],
+			[
+				"packain",
+				"Package Control: Install Package"
+			],
+			[
+				"git log",
+				"Git: Log All"
+			],
+			[
+				"stat",
+				"Git: Status"
+			],
+			[
+				"push cu",
+				"Git: Push Current Branch"
+			],
+			[
+				"pu",
+				"Git: Pull Current Branch"
+			],
+			[
+				"open",
+				"Git: Open Modified Files"
+			],
+			[
+				"git co",
+				"Git: Commit"
+			],
+			[
+				"git op",
+				"Git: Open Modified Files"
+			],
+			[
+				"git ope",
+				"Git: Open Modified Files"
+			],
+			[
+				"pull curr",
+				"Git: Pull Current Branch"
+			],
+			[
+				"git gui",
+				"Git: Gui"
+			],
+			[
+				"git l ",
+				"Git: Log All"
+			],
+			[
+				"it statu",
+				"Git: Status"
+			],
+			[
+				"git stati",
+				"Git Status Files: Opens all the files in a git repository that are listed by git status."
+			],
+			[
+				"it pu cu",
+				"Git: Pull Current Branch"
+			],
+			[
+				"git pull br",
+				"Git: Pull Current Branch"
+			],
+			[
+				"pack insta",
+				"Package Control: Install Package"
+			],
+			[
+				"close",
+				"Project: Close"
+			],
+			[
+				"packa",
+				"Package Control: Install Package"
+			],
+			[
+				"DISCO",
+				"Package Control: Discover Packages"
+			],
+			[
+				"git lo",
+				"Git: Log All"
+			],
+			[
+				"css",
+				"Set Syntax: CSS"
+			],
+			[
+				"install",
+				"Package Control: Install Package"
+			],
+			[
+				"disco",
+				"Package Control: Discover Packages"
+			],
+			[
+				"pac",
+				"Package Control: List Packages"
+			],
+			[
+				"git pull",
+				"Git: Pull Current Branch"
+			],
+			[
+				"gitg",
+				"Git: Gui"
+			],
+			[
+				"gittk",
+				"Git: Gitk"
+			],
+			[
+				"git g",
+				"Git: Gitk"
+			],
+			[
+				"git pull cur",
+				"Git: Pull Current Branch"
+			],
+			[
+				"git com",
+				"Git: Commit"
+			],
+			[
+				"git pul cur",
+				"Git: Pull Current Branch"
+			],
+			[
+				"git bran",
+				"Git: Change Branch"
+			],
+			[
+				"git pu",
+				"Git: Pull"
+			],
+			[
+				"git chan",
+				"Git: Change Branch"
+			],
+			[
+				"git br",
+				"Git: Change Branch"
+			],
+			[
+				"git pul cu",
+				"Git: Pull Current Branch"
+			],
+			[
+				"git che",
+				"Git: Change Branch"
+			],
+			[
+				"git push",
+				"Git: Push"
+			]
+		],
+		"width": 611.0
+	},
+	"console":
+	{
+		"height": 139.0,
+		"history":
+		[
+		]
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"file_history":
+	[
+		"/home/erwan/GitHub/indicator-git/indicator-git.py",
+		"/home/erwan/GitHub/indicator-git/Menu_001.png",
+		"/home/erwan/GitHub/indicator-git/add_repository_dialog.xml",
+		"/home/erwan/www/class/fonctions.inc.php",
+		"/home/erwan/www/class/lang/fr_FR_generic.inc.php",
+		"/home/erwan/www/class/lang/fr_FR_securite.inc.php",
+		"/home/erwan/www/class/PHPExcel-1.7.9/Documentation/API/packages/PHPExcel.Reader.html",
+		"/home/erwan/www/class/PHPExcel-1.7.9/Documentation/API/classes/PHPExcel_RichText_Run.html",
+		"/home/erwan/www/class/PHPExcel-1.7.9/Documentation/API/classes/PHPExcel_Reader_SYLK.html",
+		"/home/erwan/www/class/fpdf-1.7/pdf_teleric.php",
+		"/home/erwan/www/class/sms.inc.php",
+		"/home/erwan/www/class/export.gabarit.inc.php",
+		"/home/erwan/www/class/PHPExcel-1.7.9/Documentation/API/classes/PHPExcel_Shared_JAMA_LUDecomposition.html",
+		"/home/erwan/www/class/PHPExcel-1.7.9/Documentation/API/packages/JAMA.html",
+		"/home/erwan/www/class/SabreDAV-1.8.6/tests/Sabre/DAVACL/MockACLNode.php",
+		"/home/erwan/www/class/mime/mime.php",
+		"/home/erwan/www/class/alerte.inc.php",
+		"/home/erwan/www/class/PHPExcel-1.7.9/Documentation/API/classes/PHPExcel_Shared_Escher_DgContainer_SpgrContainer_SpContainer.html",
+		"/home/erwan/www/class/PHPExcel-1.7.9/Examples/templates/32readwriteBarStackedChart1.xlsx",
+		"/home/erwan/www/class/PHPExcel-1.7.9/unitTests/rawTestData/Shared/CentimeterSizeToPixels.data",
+		"/home/erwan/www/class/PHPExcel-1.7.9/Documentation/API/classes/PHPExcel_Reader_DefaultReadFilter.html",
+		"/home/erwan/www/class/PHPExcel-1.7.9/Documentation/API/classes/PHPExcel_Shared_Escher_DggContainer_BstoreContainer_BSE_Blip.html",
+		"/home/erwan/www/class/PHPExcel-1.7.9/Documentation/API/classes/PHPExcel_Shared_Escher_DgContainer_SpgrContainer.html",
+		"/home/erwan/www/class/prestation_profils.inc.php",
+		"/home/erwan/www/class/integration.inc.php",
+		"/home/erwan/www/class/prestation.inc.php",
+		"/home/erwan/www/class/PHPExcel-1.7.9/Classes/PHPExcel/Cell/DefaultValueBinder.php",
+		"/home/erwan/www/class/define.inc.php",
+		"/home/erwan/www/class/pointeuse/pointeuse.configuration.inc.php",
+		"/home/erwan/www/class/class.JavaScriptPacker.php",
+		"/home/erwan/www/class/PHPExcel-1.7.9/Classes/PHPExcel/Worksheet/RowIterator.php",
+		"/home/erwan/www/class/PHPExcel-1.7.9/unitTests/rawTestData/CellRangeBoundaries.data",
+		"/home/erwan/www/class/calendrier.inc.php",
+		"/home/erwan/www/class/export.gabarit.sql",
+		"/home/erwan/www/class/gps.inc.php",
+		"/home/erwan/www/class/sortie.inc.php",
+		"/home/erwan/www/class/lang/fr_FR_hotel.inc.php",
+		"/home/erwan/www/class/SabreDAV-1.8.6/tests/Sabre/CalDAV/GetEventsByTimerangeTest.php",
+		"/home/erwan/www/class/PHPExcel-1.7.9/unitTests/rawTestData/Calculation/MathTrig/EVEN.data",
+		"/home/erwan/GitHub/git-indicator/git-indicator.py",
+		"/home/erwan/GitHub/indicator-netspeed/indicator-netspeed.c",
+		"/home/erwan/CloudStation/Pointeuse V3/PROD Application/2.07/teleric.c",
+		"/home/erwan/CloudStation/Pointeuse V3/PROD Application/2.08/teleric.c",
+		"/home/erwan/www/test.c",
+		"/home/erwan/www/class/SabreDAV-1.8.6/tests/Sabre/DAV/ServerMKCOLTest.php",
+		"/home/erwan/www/class/site.inc.php",
+		"/home/erwan/www/class/api.inc.php",
+		"/home/erwan/www/class/rapprochement.inc.php",
+		"/home/erwan/CloudStation/Pointeuse V3/PROD Application/2.06/DouchetteG3.c",
+		"/home/erwan/www/class/client.inc.php",
+		"/home/erwan/www/class/SabreDAV-1.8.6/lib/Sabre/DAV/Property/Response.php",
+		"/home/erwan/www/class/PHPExcel-1.7.9/Documentation/API/js/jquery-ui-1.8.2.custom.min.js",
+		"/home/erwan/www/class/phpagi-2.20/api-docs/elementindex_phpAGI.html",
+		"/home/erwan/www/class/fpdf/pdf_teleric.php",
+		"/home/erwan/www/class/pointeuse/rapport.inc.php",
+		"/home/erwan/www/class/cookies.txt",
+		"/home/erwan/changelog.txt",
+		"/home/erwan/www/class/PHPExcel-1.7.9/Examples/01simple-download-pdf.php",
+		"/home/erwan/www/class/krumo/class.krumo.php",
+		"/home/erwan/www/class/intervention.inc.php",
+		"/home/erwan/www/class/agent.inc.php",
+		"/home/erwan/www/class/export.gabarit.inc.php.orig",
+		"/home/erwan/www/class/pivotable.inc.php",
+		"/home/erwan/www/class/SabreDAV-1.8.6/lib/Sabre/DAV/Property/GetLastModified.php",
+		"/home/erwan/www/class/fpdf-1.7/fpdf.php",
+		"/home/erwan/www/class/class.writeexcel_workbook.inc.php",
+		"/home/erwan/www/class/PHPExcel-1.7.7/PHPExcel.php",
+		"/home/erwan/www/class/PHPExcel-1.7.7/PHPExcel/Calculation.php",
+		"/home/erwan/www/class/PHPExcel-1.7.5/PHPExcel/Shared/PDF/config/lang/ger.php",
+		"/home/erwan/www/dev.script/tlc_cli_execution_commande_pour_chaque_VEs_a_editer.sh",
+		"/home/erwan/www/class/planification.inc.php",
+		"/home/erwan/www/class/fpdf-1.7/makefont/cp1250.map",
+		"/home/erwan/.config/sublime-text-3/Packages/User/Base File.sublime-settings",
+		"/home/erwan/class.sublime-project",
+		"/home/erwan/www/class/si/commande.inc.php.bl_unique_detail",
+		"/home/erwan/www/class/PHPExcel-1.7.5/PHPExcel/Shared/PDF/fonts/freefont-20090104/ChangeLog",
+		"/home/erwan/www/class/si/livraison.inc.php.orig",
+		"/home/erwan/www/class/fpdf-1.7/pdf_bon_livraison.php",
+		"/home/erwan/www/class/si/evenement.inc.php",
+		"/home/erwan/www/class/fpdf-1.7/pdf_bon_commande.php",
+		"/home/erwan/www/class/si/fonctions.php",
+		"/home/erwan/www/class/si/livraison.inc.php",
+		"/home/erwan/www/class/si/commande.inc.php",
+		"/home/erwan/www/admin.teleric.net/public/js/script-2.0.js.orig",
+		"/home/erwan/www/admin.teleric.net/public/js/jquery.multifile.js",
+		"/home/erwan/www/admin.teleric.net/site/traitement_recherche.php",
+		"/home/erwan/www/admin.teleric.net/site/si_evenement.php",
+		"/home/erwan/www/admin.teleric.net/site/si_entite.php",
+		"/home/erwan/www/admin.teleric.net/site/si_contact.php",
+		"/home/erwan/www/admin.teleric.net/site/si_administratif.php",
+		"/home/erwan/www/admin.teleric.net/site/serveur_ajout_formulaire.php",
+		"/home/erwan/www/admin.teleric.net/site/serveur.php",
+		"/home/erwan/www/admin.teleric.net/site/log_visite.php",
+		"/home/erwan/www/admin.teleric.net/site/log_evenement.php",
+		"/home/erwan/www/admin.teleric.net/site/log_asterisk.php",
+		"/home/erwan/www/admin.teleric.net/site/log_api.php",
+		"/home/erwan/admin.teleric.net.sublime-project",
+		"/home/erwan/www/admin.teleric.net/site/MAJ_BDD.php",
+		"/home/erwan/www/admin.teleric.net/public/js/script-2.0.js",
+		"/home/erwan/www/admin.teleric.net/site/marqueur.php",
+		"/home/erwan/www/admin.teleric.net/site/pointeuse.php",
+		"/home/erwan/www/admin.teleric.net/site/ajax_dialogue.php",
+		"/home/erwan/www/admin.teleric.net/site/index.php",
+		"/home/erwan/www/admin.teleric.net/site/class/si/evenement.inc.php",
+		"/home/erwan/www/admin.teleric.net/site/class/si/contact.inc.php",
+		"/home/erwan/www/admin.teleric.net/site/class/si/fonctions.php",
+		"/home/erwan/www/admin.teleric.net/site/gabarit_pied.php",
+		"/home/erwan/www/admin.teleric.net/site/traitement_requete.php",
+		"/home/erwan/www/admin.teleric.net/public/global-2.0.css",
+		"/home/erwan/www/admin.teleric.net/public/js/jquery.fastCombobox-0.5.1.js",
+		"/home/erwan/www/admin.teleric.net/.gitignore",
+		"/home/erwan/.config/sublime-text-3/Packages/Open-Include/Open-Include.sublime-settings",
+		"/home/erwan/.config/sublime-text-3/Packages/User/Preferences.sublime-settings",
+		"/home/erwan/www/admin.teleric.net/site/ajax_pointeuse_configuration.php",
+		"/home/erwan/.config/sublime-text-3/Packages/Default/Preferences.sublime-settings",
+		"/home/erwan/.config/sublime-text-3/Packages/User/Git.sublime-settings",
+		"/home/erwan/.config/sublime-text-3/Packages/Git/Git.sublime-settings",
+		"/home/erwan/.config/sublime-text-3/Packages/User/php.sublime-build",
+		"/home/erwan/.config/sublime-text-3/Packages/User/Package Control.sublime-settings",
+		"/home/erwan/.config/sublime-text-2/Packages/SideBarEnhancements/messages/11.13.2012.1305.0.txt",
+		"/home/erwan/www/admin.teleric.net/public/js/jquery.fastCombobox-0.5.0.min.js",
+		"/home/erwan/www/admin.teleric.net/site/class/admin/affichage.inc.php",
+		"/home/erwan/www/admin.teleric.net/site/gabarit_menu.php",
+		"/home/erwan/www/admin.teleric.net/site/serveur_ajout.php",
+		"/home/erwan/www/admin.teleric.net/site/ajax_details.php",
+		"/home/erwan/www/admin.teleric.net/site/traitement_requete_ajax.php",
+		"/home/erwan/www/admin.teleric.net/public/img/icones/formulaire_lignes_fade.png",
+		"/home/erwan/www/admin.teleric.net/public/img/icones/formulaire_lignes.png"
+	],
+	"find":
+	{
+		"height": 35.0
+	},
+	"find_in_files":
+	{
+		"height": 93.0,
+		"where_history":
+		[
+			""
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": true,
+		"find_history":
+		[
+			"self.repositories[dirname]",
+			"self.repositories[dirname].show()",
+			"pause_item",
+			"sep_item_top",
+			"clear_item",
+			"shutil",
+			"formatExceptionInfo",
+			"ConfigParser.SafeConf",
+			"builder",
+			"PreferencesDialog",
+			"set_active",
+			"set_value",
+			"append",
+			"filename",
+			"Fetcher",
+			"self.fetch",
+			"menu_update_lock",
+			"repositorieslist",
+			"wi =",
+			"wi.",
+			"wi",
+			"PreferencesDialog",
+			"self.status_item",
+			"self.menu.append",
+			"_item",
+			"self.menu.repositories",
+			"bool(",
+			"confSup",
+			"monitors",
+			"commit",
+			"repo_items",
+			"initialize_menu",
+			"GIT_VIEWER",
+			"DIRECTORY_PROJECT_ROOT",
+			"MIRRORS_DIRECTORY",
+			"PROJECT_ROOT_DIRECTORY",
+			"check_output",
+			"signa",
+			"minute",
+			"Check",
+			"chack",
+			"signal",
+			"mini",
+			"signal",
+			"ok_",
+			"signa",
+			"signal",
+			"repositorieslist",
+			"width",
+			"repositorieslist",
+			"3",
+			" ",
+			"newplace",
+			"finish",
+			"DEFAULT_INTERVAL",
+			"set_value",
+			"cancel",
+			"ok_button",
+			"'min'",
+			"interval",
+			"INFORMATION : ÉTAT GPS",
+			"$presta_cat",
+			"// Pour le moment, une seule tache :",
+			"$prestation['taches']",
+			"2",
+			"nb_tache",
+			"$service_sms",
+			"mysqli",
+			"mysql_query('DELI",
+			"_query('DELI",
+			"trigger_error(",
+			"ne->type, array('MONTH', 'DATE', 'DATE",
+			"margin-right: 4px; ",
+			"checked",
+			"query/images/ui-bg_diagonals-thick_1",
+			"images/ui-bg_diagonals-thi",
+			"15",
+			"TIME_TO_SEC",
+			"TIME_TO_SEC\nTIME_TO_SEC",
+			"TIME_TO_SEC",
+			"SEC_TO_TIME",
+			"':'",
+			"0'",
+			"DECIMAL(10)",
+			"60",
+			"DECIMAL(10))*",
+			"DECIMAL(10)",
+			"CAST",
+			"FOR",
+			"FROM",
+			"CAST",
+			"SEC_TO",
+			"$evp = duration2",
+			"evp",
+			"html_intervalle",
+			"min",
+			"80",
+			"100px",
+			"min",
+			"filtre",
+			"'min'",
+			"min",
+			"php_array",
+			"$array",
+			"62",
+			"62 =>",
+			"choc",
+			"Paramètrage",
+			"Non",
+			")),",
+			"=> ",
+			"=> array('categorie'=>'",
+			"intervention_csv",
+			"[$index]",
+			"$intervention_csv",
+			"HEURE_PER",
+			"_SMS",
+			"RepAT_CMGS",
+			"SMS_ENVOI_ETAT_DEMANDE",
+			"SMS_",
+			"cache['",
+			"data",
+			"CEGID_code_affaire",
+			"site",
+			"realisee",
+			"H:i:s",
+			"heure",
+			"prevu"
+		],
+		"highlight": true,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": false,
+		"replace_history":
+		[
+			"self.menu['items']['repositories'][dirname]",
+			"self.menu['items']['repositories'][dirname].show()",
+			"menu['items']['pause']",
+			"menu['items']['sep_top']",
+			"menu['items']['clear']",
+			"menu['items']",
+			"self.menu['items']['status']",
+			"INFORMATION : État GPS",
+			"Paramétrage",
+			"%-'.148s\"",
+			"%-'.147s\"",
+			"%-'.150s\"",
+			"%-'.148s\"",
+			"%-'.147s\"",
+			"%-'.149s\"",
+			"					// $a",
+			"$rest = new RestRequest($requete, strtoupper($methode), ",
+			"$arguments['time']		= microtime(true)*10000;",
+			"$arguments['time']		= microtime()*1000;",
+			"//echo $sql, '<br />', \"\\n\";",
+			"echo $sql, '<br />', \"\\n\";",
+			"Détection de déplacement",
+			"	// supprime_alerte",
+			"((evenement.traitement >= 100 AND evenement.traitement < 200) OR (-evenement.traitement >= 100 AND -evenement.traitement < 200))",
+			"chemins2leftJoinArray",
+			"'Agent ET site inconnus'",
+			"exportation_gabarit_chemin",
+			"dirname(__FILE__).\"/img/",
+			"'",
+			"	//trigger_error($sql);",
+			"$prestation_nouvelle",
+			"$prestation_ancienne",
+			"$prestation",
+			"$prestation_nouvelle",
+			"$prestation_ancienne",
+			"$local_ancien[",
+			"prestation",
+			"	//trigger_error($sql);",
+			"trigger_error($sql);",
+			"	//trigger_error($sql);",
+			"$data_csv['local']['",
+			"pdf.gif",
+			"echo($sql);",
+			"u",
+			"icons: {primary: \"ui-icon-plusthick\"},",
+			"250px",
+			"225px",
+			"…img/onebit/16x16/onebit_49.png",
+			"…img/onebit/16x16/onebit_34.png",
+			"…",
+			"img/onebit/16x16/onebit_33.png",
+			"è",
+			"<td><a href=\"index.php?menu=%s&amp;%s&amp;annee=%d&amp;mois=%d&amp;jour=%d\">%d</a></td>",
+			"<td><a class=\"ui-widget-content\" href=\"index.php?menu=%s&amp;%s&amp;annee=%d&amp;mois=%d&amp;jour=%d\">%d</a></td>",
+			"<td colspan=\"%d\"><a href=\"index.php?menu=%s&amp;%s&amp;annee=%d&amp;mois=%d\">%s</a></td>",
+			"printf('<td colspan=\"%d\"><a class=\"ui-widget-content\" href=\"index.php?menu=%s&amp;%s&amp;annee=%d&amp;mois=%d\">%s</a></td>",
+			" printf('index.php?menu=%s&amp;%s&amp;annee=%d&amp;mois=%d&amp;jour=%d",
+			" ",
+			"contact_suppression",
+			"entite_suppression",
+			"entite_edition",
+			"contact_edition",
+			"replication_etat",
+			"",
+			"$red = ' background: url(img/onebit/16x16/onebit_36.png) no-repeat center left';",
+			"$red = ' background: url(img/icones/onebit/16x16/onebit_36.png) no-repeat center left';",
+			"ê",
+			"à",
+			"é",
+			"_input'",
+			"$message_ko .= \"Une erreur s'est produite pendant l'envoi du message à {$tab_utilisateur[$utilisateur]['mail']}<br />\";",
+			"($_SESSION['tlc'] == 1)",
+			"message"
+		],
+		"reverse": false,
+		"show_context": true,
+		"use_buffer2": true,
+		"whole_word": false,
+		"wrap": true
+	},
+	"groups":
+	[
+		{
+			"selected": 0,
+			"sheets":
+			[
+				{
+					"buffer": 0,
+					"file": "indicator-git.py",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 17607,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								11588,
+								11588
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Python/Python.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 4863.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 0,
+					"type": "text"
+				}
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 26.0
+	},
+	"input":
+	{
+		"height": 33.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			]
+		],
+		"cols":
+		[
+			0.0,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			1.0
+		]
+	},
+	"menu_visible": true,
+	"output.exec":
+	{
+		"height": 128.0
+	},
+	"output.find_results":
+	{
+		"height": 0.0
+	},
+	"output.git":
+	{
+		"height": 187.0
+	},
+	"output.xdebug_inspect":
+	{
+		"height": 112.0
+	},
+	"project": "indicator-git.sublime-project",
+	"replace":
+	{
+		"height": 64.0
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0.0,
+		"selected_items":
+		[
+			[
+				"indi",
+				"indicator-git/indicator-git.py"
+			],
+			[
+				"export",
+				"export.gabarit.inc.php"
+			],
+			[
+				"rapp",
+				"rapprochement.inc.php"
+			],
+			[
+				"integra",
+				"integration.inc.php"
+			],
+			[
+				"fr_fr",
+				"lang/fr_FR_generic.inc.php"
+			],
+			[
+				"presta",
+				"prestation.inc.php"
+			],
+			[
+				"sort",
+				"sortie.inc.php"
+			],
+			[
+				"fonctio",
+				"fonctions.inc.php"
+			],
+			[
+				"site",
+				"site.inc.php"
+			],
+			[
+				"agent",
+				"agent.inc.php"
+			],
+			[
+				"interve",
+				"intervention.inc.php"
+			],
+			[
+				"pointeu",
+				"pointeuse/pointeuse.configuration.inc.php"
+			],
+			[
+				"alerte",
+				"alerte.inc.php"
+			],
+			[
+				"pointeuse",
+				"pointeuse/pointeuse.configuration.inc.php"
+			],
+			[
+				"sms",
+				"sms.inc.php"
+			],
+			[
+				"alert",
+				"alerte.inc.php"
+			],
+			[
+				"gabasql",
+				"export.gabarit.sql"
+			],
+			[
+				"inte",
+				"integration.inc.php"
+			],
+			[
+				"exposql",
+				"export.gabarit.sql"
+			],
+			[
+				"gabar",
+				"export.gabarit.inc.php"
+			],
+			[
+				"fr",
+				"lang/fr_FR_securite.inc.php"
+			],
+			[
+				"pointcon",
+				"pointeuse/pointeuse.configuration.inc.php"
+			],
+			[
+				"rappro",
+				"rapprochement.inc.php"
+			],
+			[
+				"interv",
+				"intervention.inc.php"
+			],
+			[
+				"client",
+				"client.inc.php"
+			],
+			[
+				"integration",
+				"integration.inc.php"
+			],
+			[
+				"pointeuse.con",
+				"pointeuse/pointeuse.configuration.inc.php"
+			],
+			[
+				"pointc",
+				"pointeuse/pointeuse.configuration.inc.php"
+			],
+			[
+				"rest",
+				"apiRestRequest.inc.php"
+			],
+			[
+				"fonction",
+				"fonctions.inc.php"
+			],
+			[
+				"inter",
+				"intervention.inc.php"
+			],
+			[
+				"session",
+				"session.inc.php"
+			],
+			[
+				"rappr",
+				"rapprochement.inc.php"
+			],
+			[
+				"sorte",
+				"sortie.inc.php"
+			],
+			[
+				"pointeuconf",
+				"pointeuse/pointeuse.configuration.inc.php"
+			],
+			[
+				"sortie",
+				"sortie.inc.php"
+			],
+			[
+				"oointeu",
+				"pointeuse/pointeuse.configuration.inc.php"
+			],
+			[
+				"fonc",
+				"fonctions.inc.php"
+			],
+			[
+				"planni",
+				"planification.inc.php"
+			],
+			[
+				"dev",
+				"PHPExcel-1.7.9/Classes/PHPExcel/Cell/DefaultValueBinder.php"
+			],
+			[
+				"pdf",
+				"fpdf-1.7/pdf_teleric.php"
+			],
+			[
+				"cale",
+				"calendrier.inc.php"
+			],
+			[
+				"integ",
+				"integration.inc.php"
+			],
+			[
+				"calend",
+				"calendrier.inc.php"
+			],
+			[
+				"pdftele",
+				"fpdf/pdf_teleric.php"
+			],
+			[
+				"calendrer",
+				"calendrier.inc.php"
+			],
+			[
+				"rapr",
+				"rapprochement.inc.php"
+			],
+			[
+				"cook",
+				"cookies.txt"
+			],
+			[
+				"al",
+				"alerte.inc.php"
+			],
+			[
+				"sessio",
+				"session.inc.php"
+			],
+			[
+				".sql",
+				"export.gabarit.sql"
+			],
+			[
+				"calendrier",
+				"calendrier.inc.php"
+			],
+			[
+				"pdf_tele",
+				"fpdf-1.7/pdf_teleric.php"
+			],
+			[
+				"krum",
+				"krumo/class.krumo.php"
+			],
+			[
+				".ori",
+				"export.gabarit.inc.php.orig"
+			],
+			[
+				"gaba",
+				"export.gabarit.inc.php"
+			],
+			[
+				"pivotab",
+				"pivotable.inc.php"
+			],
+			[
+				"modi",
+				"SabreDAV-1.8.6/lib/Sabre/DAV/Property/GetLastModified.php"
+			],
+			[
+				"intervention",
+				"intervention.inc.php"
+			],
+			[
+				"orig",
+				"export.gabarit.inc.php.orig"
+			],
+			[
+				"gabarit",
+				"export.gabarit.sql"
+			],
+			[
+				"exportgaba",
+				"export.gabarit.inc.php"
+			],
+			[
+				"prestation",
+				"prestation.inc.php"
+			],
+			[
+				"prest",
+				"prestation.inc.php"
+			],
+			[
+				"intervet",
+				"intervention.inc.php"
+			],
+			[
+				"site.inc",
+				"site.inc.php"
+			],
+			[
+				"exporta",
+				"export.gabarit.sql"
+			],
+			[
+				"lient",
+				"client.inc.php"
+			],
+			[
+				"exportat",
+				"export.gabarit.sql"
+			],
+			[
+				"gab",
+				"export.gabarit.sql"
+			],
+			[
+				"prestationprof",
+				"prestation_profils.inc.php"
+			],
+			[
+				"expogaba",
+				"export.gabarit.sql"
+			],
+			[
+				"integr",
+				"integration.inc.php"
+			],
+			[
+				"pivat",
+				"pivotable.inc.php"
+			],
+			[
+				"pivo",
+				"pivotable.inc.php"
+			],
+			[
+				"lang",
+				"PHPExcel-1.7.5/PHPExcel/Shared/PDF/config/lang/ger.php"
+			],
+			[
+				"workboo",
+				"class.writeexcel_workbook.inc.php"
+			],
+			[
+				"prestation.inc",
+				"prestation.inc.php"
+			],
+			[
+				"api.inc",
+				"api.inc.php"
+			],
+			[
+				"tran",
+				"pointeuse/transcode.inc.php"
+			],
+			[
+				"",
+				"alerte.inc.php"
+			],
+			[
+				"plani",
+				"planification.inc.php"
+			],
+			[
+				"define",
+				"define.inc.php"
+			],
+			[
+				"pdfli",
+				"fpdf-1.7/pdf_bon_livraison.php"
+			],
+			[
+				"livr",
+				"si/livraison.inc.php"
+			],
+			[
+				"comm",
+				"si/commande.inc.php"
+			],
+			[
+				"livrai",
+				"si/livraison.inc.php"
+			],
+			[
+				"pdflivr",
+				"fpdf-1.7/pdf_bon_livraison.php"
+			],
+			[
+				"pdfcomm",
+				"fpdf-1.7/pdf_bon_commande.php"
+			],
+			[
+				"comminc",
+				"si/commande.inc.php"
+			],
+			[
+				"cript",
+				"public/js/script-2.0.js"
+			],
+			[
+				"trq",
+				"site/traitement_requete.php"
+			],
+			[
+				"admin",
+				"site/si_administratif.php"
+			],
+			[
+				"maj",
+				"site/MAJ_BDD.php"
+			],
+			[
+				"traja",
+				"site/traitement_requete_ajax.php"
+			],
+			[
+				"reche",
+				"site/traitement_recherche.php"
+			],
+			[
+				"dialo",
+				"site/ajax_dialogue.php"
+			],
+			[
+				"evenement",
+				"site/si_evenement.php"
+			],
+			[
+				"menu",
+				"site/gabarit_menu.php"
+			],
+			[
+				"glob",
+				"public/global-2.0.css"
+			],
+			[
+				"trreq",
+				"site/traitement_requete.php"
+			],
+			[
+				"dialog",
+				"site/ajax_dialogue.php"
+			],
+			[
+				"req",
+				"site/traitement_requete.php"
+			],
+			[
+				"dial",
+				"site/ajax_dialogue.php"
+			],
+			[
+				"arbr",
+				"site/ajax_arbre.php"
+			],
+			[
+				"evene",
+				"site/si_evenement.php"
+			],
+			[
+				"conta",
+				"site/si_contact.php"
+			],
+			[
+				"ene",
+				"site/si_entite.php"
+			],
+			[
+				"contact",
+				"site/si_contact.php"
+			],
+			[
+				"enti",
+				"site/si_entite.php"
+			],
+			[
+				"sim",
+				"site/sim.php"
+			],
+			[
+				"con",
+				"site/si_contact.php"
+			],
+			[
+				"entit",
+				"site/si_entite.php"
+			],
+			[
+				"cont",
+				"site/si_contact.php"
+			],
+			[
+				"entite",
+				"site/si_entite.php"
+			],
+			[
+				"serv",
+				"site/serveur.php"
+			],
+			[
+				"marqueur",
+				"site/marqueur.php"
+			],
+			[
+				"server",
+				"site/serveur.php"
+			],
+			[
+				"crip",
+				"public/js/script-2.0.js"
+			],
+			[
+				"eve",
+				"site/si_evenement.php"
+			],
+			[
+				"scrip",
+				"public/js/script-2.0.js"
+			],
+			[
+				"ser",
+				"site/serveur.php"
+			],
+			[
+				"serve",
+				"site/serveur.php"
+			],
+			[
+				"conact",
+				"site/si_contact.php"
+			],
+			[
+				"aj",
+				"site/MAJ_BDD.php"
+			],
+			[
+				"tr",
+				"site/traitement_requete.php"
+			],
+			[
+				"trreqaja",
+				"site/traitement_requete_ajax.php"
+			],
+			[
+				"trai",
+				"site/traitement_requete.php"
+			]
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 500.0,
+		"selected_items":
+		[
+			[
+				"clas",
+				"~/class.sublime-project"
+			],
+			[
+				"app",
+				"~/appel.sublime-project"
+			],
+			[
+				"class",
+				"~/class.sublime-project"
+			],
+			[
+				"dev",
+				"~/dev.teleric.net.sublime-project"
+			],
+			[
+				"sms",
+				"~/sms.sublime-project"
+			],
+			[
+				"admi",
+				"~/admin.teleric.net.sublime-project"
+			],
+			[
+				"scrp",
+				"~/script.sublime-project"
+			],
+			[
+				"script",
+				"~/script.sublime-project"
+			],
+			[
+				"coucou",
+				"~/coucou.sublime-project"
+			],
+			[
+				"cou",
+				"~/coucou.sublime-project"
+			],
+			[
+				"",
+				"~/coucou.sublime-project"
+			],
+			[
+				"admin",
+				"~/admin.teleric.net.sublime-project"
+			],
+			[
+				"DEV",
+				"~/dev.teleric.net.sublime-project"
+			],
+			[
+				"cript",
+				"~/script.sublime-project"
+			],
+			[
+				"scr",
+				"~/script.sublime-project"
+			],
+			[
+				"ev",
+				"~/dev.teleric.net.sublime-project"
+			],
+			[
+				"dev.tele",
+				"~/dev.teleric.net.sublime-project"
+			],
+			[
+				"de",
+				"~/dev.teleric.net.sublime-project"
+			],
+			[
+				"dev.",
+				"~/dev.teleric.net.sublime-project"
+			],
+			[
+				"cla",
+				"~/class.sublime-project"
+			],
+			[
+				"cl",
+				"~/class.sublime-project"
+			],
+			[
+				"js",
+				"~/js.sublime-project"
+			],
+			[
+				"dv",
+				"~/dev.teleric.net.sublime-project"
+			],
+			[
+				"jque",
+				"~/jquery.plugins.sublime-project"
+			],
+			[
+				"jquery",
+				"~/jquery.plugins.sublime-project"
+			],
+			[
+				"pl",
+				"~/jquery.plugins.sublime-project"
+			]
+		],
+		"width": 380.0
+	},
+	"select_symbol":
+	{
+		"height": 54.0,
+		"selected_items":
+		[
+			[
+				"couleur_entete_niveau",
+				"couleur_entete_niveau"
+			],
+			[
+				"second8601",
+				"second8601"
+			],
+			[
+				"num2alpha",
+				"num2alpha"
+			],
+			[
+				"html_filtre",
+				"html_filtre"
+			],
+			[
+				"html_checklist",
+				"html_checklist"
+			],
+			[
+				"teleph",
+				"format_numero_telephone"
+			],
+			[
+				"form",
+				"format_telephone"
+			],
+			[
+				"2013",
+				"corrige_bug_dateHeure_2013"
+			],
+			[
+				"39",
+				"date3339"
+			],
+			[
+				"getTimeSecond",
+				"getTimeSecond"
+			],
+			[
+				"33",
+				"date3339"
+			],
+			[
+				"tronqu",
+				"tronquer"
+			],
+			[
+				"getAdhOption",
+				"getAdhOption"
+			],
+			[
+				"evenement_recherche_gps",
+				"evenement_recherche_gps"
+			],
+			[
+				"GPS",
+				"evenement_recherche_gps"
+			],
+			[
+				"marqueur",
+				"marqueur_id2mat"
+			],
+			[
+				"adhoption",
+				"getAdhOption"
+			],
+			[
+				"icones_configuration_pointeuse",
+				"icones_configuration_pointeuse"
+			],
+			[
+				"is_array_empty",
+				"is_array_empty"
+			],
+			[
+				"reponse",
+				"reponse"
+			],
+			[
+				"response",
+				"Response"
+			],
+			[
+				"acce",
+				"remove_accents"
+			],
+			[
+				"accent",
+				"remove_accents"
+			],
+			[
+				"maille_en_image",
+				"maille_en_image"
+			],
+			[
+				"afficheRapp",
+				"afficheRapport"
+			],
+			[
+				"duration2",
+				"duration2"
+			],
+			[
+				"min2heure",
+				"min2heure"
+			],
+			[
+				"write_string",
+				"write_string"
+			],
+			[
+				"presta_resume",
+				"presta_resume"
+			],
+			[
+				"alerte_cron",
+				"alerte_cron"
+			],
+			[
+				"options_intervention",
+				"options_intervention"
+			],
+			[
+				"intervention_sortie",
+				"intervention_sortie"
+			],
+			[
+				"icone",
+				"icones_configuration_pointeuse"
+			],
+			[
+				"contenuCase",
+				"contenuCase"
+			],
+			[
+				"format_telephone",
+				"format_telephone"
+			],
+			[
+				"supprime_alerte",
+				"supprime_alerte"
+			],
+			[
+				"getPhotoOriginale",
+				"getPhotoOriginale"
+			],
+			[
+				"info_alerte",
+				"info_alerte"
+			],
+			[
+				"rappro",
+				"afficheRapport"
+			],
+			[
+				"afficheArbre",
+				"afficheArbre"
+			],
+			[
+				"dista",
+				"distance_haversine"
+			],
+			[
+				"droit",
+				"droitArray"
+			],
+			[
+				"sql",
+				"SQL"
+			],
+			[
+				"pointeuse",
+				"pointeuse_id2mat"
+			],
+			[
+				"chemins2leftJoinArray",
+				"chemins2leftJoinArray"
+			],
+			[
+				"asterisk_normalise_telephone",
+				"asterisk_normalise_telephone"
+			],
+			[
+				"telepho",
+				"format_telephone"
+			],
+			[
+				"istance",
+				"distance_haversine"
+			],
+			[
+				"pointeuse_agent_affect",
+				"pointeuse_agent_affect"
+			],
+			[
+				"export",
+				"export_excel"
+			],
+			[
+				"taille_pdf",
+				"taille_pdf"
+			],
+			[
+				"taille",
+				"taille_pdf"
+			],
+			[
+				"export_pdf",
+				"export_pdf"
+			],
+			[
+				"formatDate",
+				"formatDate"
+			],
+			[
+				"import",
+				"csv_import_local"
+			],
+			[
+				"csv_import_agent",
+				"csv_import_agent"
+			],
+			[
+				"csv_import_site",
+				"csv_import_site"
+			],
+			[
+				"csv_import_client",
+				"csv_import_client"
+			],
+			[
+				"affi",
+				"afficheCalendrier"
+			],
+			[
+				"even",
+				"evenement_cap"
+			],
+			[
+				"faire",
+				"faire_input_date"
+			],
+			[
+				"faire_input_date",
+				"faire_input_date"
+			],
+			[
+				"getAttribute",
+				"getAttribute"
+			],
+			[
+				"horaire_intervention",
+				"horaire_intervention"
+			],
+			[
+				"second8",
+				"second8601"
+			],
+			[
+				"getRequete",
+				"getRequete"
+			],
+			[
+				"duration",
+				"duration8601"
+			],
+			[
+				"heure",
+				"heure2min"
+			],
+			[
+				"date33",
+				"date3339"
+			],
+			[
+				"listecommande",
+				"listecommande"
+			],
+			[
+				"dialo",
+				"dialogue_commande"
+			],
+			[
+				"livr",
+				"information_livraison"
+			],
+			[
+				"listecomm",
+				"listecommande"
+			],
+			[
+				"information",
+				"information_livraison"
+			],
+			[
+				"information_livraison",
+				"information_livraison"
+			],
+			[
+				"restelivtotal",
+				"restelivtotal"
+			],
+			[
+				"affiche_ev",
+				"affiche_evenement"
+			],
+			[
+				"liste",
+				"listecommande"
+			],
+			[
+				"evene",
+				"afficheEvenement"
+			],
+			[
+				"affic",
+				"afficheDetailSiEvenement"
+			],
+			[
+				"dialogue",
+				"dialogue"
+			]
+		],
+		"width": 548.0
+	},
+	"settings":
+	{
+	},
+	"show_minimap": true,
+	"show_open_files": true,
+	"show_tabs": true,
+	"side_bar_visible": true,
+	"side_bar_width": 295.0,
+	"status_bar_visible": true,
+	"template_settings":
+	{
+	}
+}
