@@ -4,6 +4,10 @@
 		"selected_items":
 		[
 			[
+				"exp",
+				"except"
+			],
+			[
 				"re",
 				"repository"
 			],
@@ -153,17 +157,6 @@
 			]
 		]
 	},
-	"buffers":
-	[
-		{
-			"file": "indicator-git.py",
-			"settings":
-			{
-				"buffer_size": 17607,
-				"line_ending": "Unix"
-			}
-		}
-	],
 	"build_system": "",
 	"command_palette":
 	{
@@ -567,9 +560,10 @@
 	},
 	"file_history":
 	[
+		"/home/erwan/GitHub/indicator-git/add_repository_dialog.xml",
+		"/usr/share/indicator-weather/ui/Assistant.ui",
 		"/home/erwan/GitHub/indicator-git/indicator-git.py",
 		"/home/erwan/GitHub/indicator-git/Menu_001.png",
-		"/home/erwan/GitHub/indicator-git/add_repository_dialog.xml",
 		"/home/erwan/www/class/fonctions.inc.php",
 		"/home/erwan/www/class/lang/fr_FR_generic.inc.php",
 		"/home/erwan/www/class/lang/fr_FR_securite.inc.php",
@@ -693,8 +687,7 @@
 		"/home/erwan/www/admin.teleric.net/site/serveur_ajout.php",
 		"/home/erwan/www/admin.teleric.net/site/ajax_details.php",
 		"/home/erwan/www/admin.teleric.net/site/traitement_requete_ajax.php",
-		"/home/erwan/www/admin.teleric.net/public/img/icones/formulaire_lignes_fade.png",
-		"/home/erwan/www/admin.teleric.net/public/img/icones/formulaire_lignes.png"
+		"/home/erwan/www/admin.teleric.net/public/img/icones/formulaire_lignes_fade.png"
 	],
 	"find":
 	{
@@ -713,6 +706,19 @@
 		"case_sensitive": true,
 		"find_history":
 		[
+			"TODO",
+			"add_section",
+			"self.repositories",
+			"print",
+			"schedule_refresh",
+			"schedule_refresh\nschedule_refresh",
+			"schedule_refresh",
+			"DO menu upd",
+			"initialize_menu",
+			"git",
+			"error",
+			"-format",
+			"n.show ()",
 			"self.repositories[dirname]",
 			"self.repositories[dirname].show()",
 			"pause_item",
@@ -827,20 +833,7 @@
 			"=> array('categorie'=>'",
 			"intervention_csv",
 			"[$index]",
-			"$intervention_csv",
-			"HEURE_PER",
-			"_SMS",
-			"RepAT_CMGS",
-			"SMS_ENVOI_ETAT_DEMANDE",
-			"SMS_",
-			"cache['",
-			"data",
-			"CEGID_code_affaire",
-			"site",
-			"realisee",
-			"H:i:s",
-			"heure",
-			"prevu"
+			"$intervention_csv"
 		],
 		"highlight": true,
 		"in_selection": false,
@@ -848,6 +841,7 @@
 		"regex": false,
 		"replace_history":
 		[
+			"n.show()",
 			"self.menu['items']['repositories'][dirname]",
 			"self.menu['items']['repositories'][dirname].show()",
 			"menu['items']['pause']",
@@ -928,44 +922,6 @@
 		"whole_word": false,
 		"wrap": true
 	},
-	"groups":
-	[
-		{
-			"selected": 0,
-			"sheets":
-			[
-				{
-					"buffer": 0,
-					"file": "indicator-git.py",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 17607,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								11588,
-								11588
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/Python/Python.tmLanguage",
-							"translate_tabs_to_spaces": false
-						},
-						"translation.x": 0.0,
-						"translation.y": 4863.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 0,
-					"type": "text"
-				}
-			]
-		}
-	],
 	"incremental_find":
 	{
 		"height": 26.0
@@ -1013,7 +969,6 @@
 	{
 		"height": 112.0
 	},
-	"project": "indicator-git.sublime-project",
 	"replace":
 	{
 		"height": 64.0

@@ -76,7 +76,6 @@ class GitMonitor(threading.Thread):
 	def read_config(self):
 
 		print 'Read configuration file'
-
 		self.config = {"interval": DEFAULT_INTERVAL, "viewer": DEFAULT_GIT_VIEWER, "notification": {"commit": True, "branch": True, "tag": True}}
 		try:
 			conf = ConfigParser.SafeConfigParser()
@@ -89,7 +88,9 @@ class GitMonitor(threading.Thread):
 			self.config["notification"]["branch"]	= True
 			self.config["notification"]["tag"]		= conf.getboolean("notification", "tag")
 			self.config["notification"]["tag"]		= True
+			self.repositories = {}
 			self.repositories = map(lambda n:n[1],sorted(conf.items("repositories")))
+			print self.repositories
 		except:
 			pass
 
@@ -110,7 +111,7 @@ class GitMonitor(threading.Thread):
 			self.menu['gtk'].append(repo_item)
 			self.menu['items']['repositories'][repositoryName] = repo_item
 			self.menu['items']['repositories'][repositoryName].connect("activate", self.viewer, dirname)
-			# TODO count bubble
+			# TODO : count bubble like ubuntu mail notication menu
 
 		self.menu['items']['clear'] = gtk.MenuItem("Clear")
 		self.menu['items']['clear'].connect("activate", self.clear)
@@ -186,6 +187,7 @@ class GitMonitor(threading.Thread):
 			# Get the remote origin url :
 			try:
 				url = check_output(["git", "config", "--get", "remote.origin.url"], stderr=STDOUT).rstrip()
+				# print url
 				urls.append(url)
 			except:
 				print formatExceptionInfo()
@@ -198,6 +200,8 @@ class GitMonitor(threading.Thread):
 				print "Deleting %s/%s" % (DIRECTORY_MIRRORS, dirname)
 				self.menu['items']['status'].set_label("Deleting %s" % (dirname))
 				shutil.rmtree(dirname)
+				# TODO : check menu update
+				self.initialize_menu()
 				continue
 
 			# Fetch the repository :
@@ -211,34 +215,80 @@ class GitMonitor(threading.Thread):
 				output = check_output(["git", "fetch"], stderr=STDOUT)
 			except CalledProcessError:
 				print "Error fetching %s" % dirname
+				self.menu['items']['clear'].show()
 				self.indicator.set_icon(os.path.join(DIRECTORY_PROJECT_ROOT, "icons/error.png"))
 				self.set_status_label("Error fetching %s" % dirname)
 				pynotify.init("git-indicator")
 				n = pynotify.Notification("Error fetching %s" % dirname, '', os.path.join(DIRECTORY_PROJECT_ROOT, "icons/error.png"))
 				n.show()
 
+			# DEBUG :
+			# output = 'Fetching /home/erwan/.indicator-git/mirrors/dev.teleric.net' + "\n" + \
+			# 		  'From git.teleric.net:/home/git/dev.teleric.net' + "\n" + \
+ 			#		  '+ 89399ee...a291ee3 dev        -> dev  (forced update)' + "\n" + \
+   			#		  '085ff81..a291ee3  prod       -> prod' + "\n" + \
+			# 		  'New branch class/alerte' + "\n"
+
+			# print output
 
 			for line in output.split('\n'):
 				if '->' not in line:
 					continue
-				if '..' in line:
-					commit_range = line.split()[0]
-					branch_name = line.split()[1]
-					# TODO for each commits (split('\n') ???)
-					commit_message = check_output(["git", "log", commit_range, "--pretty=format:%s"], stderr=STDOUT)
-					commit_author = check_output(["git", "log", commit_range, "--pretty=format:%an"], stderr=STDOUT)
-					print 'New commits in %s/%s by %s: %s' % (dirname, branch_name, commit_author, commit_message)
-					self.menu['items']['clear'].show()
-					self.menu['items']['sep_top'].show()
-					self.menu['items']['repositories'][dirname].show()
-					if self.indicator.get_icon() == os.path.join(DIRECTORY_PROJECT_ROOT, "icons/fetching.png"):
-						self.indicator.set_icon(os.path.join(DIRECTORY_PROJECT_ROOT, "icons/commit.png"))
-					# TODO notify only if checked :
-					pynotify.init("git-indicator")
-					n = pynotify.Notification("New commits in %s/%s (%s)" % (dirname, branch_name, commit_author), commit_message, os.path.join(DIRECTORY_PROJECT_ROOT, "icons/commit.png"))
-					n.show ()
 
-				if 'new branch' in line:
+				if '...' in line:
+					# Forced update (only ?):
+					commits_range = line.split()[1]
+					branch_name = line.split()[2] + ' ' + line.split()[3]
+					if not commits_range:
+						continue
+					commit_hashs = check_output(["git", "log", commits_range, "--pretty=format:%H"], stderr=STDOUT)
+
+					for commit_hash in commit_hashs.split('\n'):
+						if not commit_hash:
+							continue
+						commit_message = check_output(["git", "log", "-1", "--format=%s", commit_hash], stderr=STDOUT)
+						commit_author = check_output(["git", "log", "-1", "--format=%an", commit_hash], stderr=STDOUT)
+
+						print 'New commit in %s/%s by %s: %s' % (dirname, branch_name, commit_author, commit_message)
+
+						self.menu['items']['clear'].show()
+						self.menu['items']['sep_top'].show()
+						self.menu['items']['repositories'][dirname].show()
+						if self.indicator.get_icon() == os.path.join(DIRECTORY_PROJECT_ROOT, "icons/fetching.png"):
+							self.indicator.set_icon(os.path.join(DIRECTORY_PROJECT_ROOT, "icons/commit.png"))
+						# TODO : notify only if checked :
+						pynotify.init("git-indicator")
+						n = pynotify.Notification("%s: New commit in %s/%s" % (commit_author, dirname, branch_name), commit_message, os.path.join(DIRECTORY_PROJECT_ROOT, "icons/commit.png"))
+						n.show()
+
+				elif '..' in line:
+					# Regular Commit :
+					commits_range = line.split()[0]
+					branch_name = line.split()[1]
+					if not commits_range:
+						continue
+					commit_hashs = check_output(["git", "log", commits_range, "--pretty=format:%H"], stderr=STDOUT)
+
+					for commit_hash in commit_hashs.split('\n'):
+						if not commit_hash:
+							continue
+						commit_message = check_output(["git", "log", "-1", "--format=%s", commit_hash], stderr=STDOUT)
+						commit_author = check_output(["git", "log", "-1", "--format=%an", commit_hash], stderr=STDOUT)
+
+						print 'New commit in %s/%s by %s: %s' % (dirname, branch_name, commit_author, commit_message)
+
+						self.menu['items']['clear'].show()
+						self.menu['items']['sep_top'].show()
+						self.menu['items']['repositories'][dirname].show()
+						if self.indicator.get_icon() == os.path.join(DIRECTORY_PROJECT_ROOT, "icons/fetching.png"):
+							self.indicator.set_icon(os.path.join(DIRECTORY_PROJECT_ROOT, "icons/commit.png"))
+						# TODO : notify only if checked :
+						pynotify.init("git-indicator")
+						n = pynotify.Notification("%s: New commit in %s/%s" % (commit_author, dirname, branch_name), commit_message, os.path.join(DIRECTORY_PROJECT_ROOT, "icons/commit.png"))
+						n.show()
+
+				elif 'new branch' in line:
+					# New branch :
 					branch_name = line.split()[3]
 					print 'New branch %s/%s' % (dirname, branch_name)
 					self.menu['items']['clear'].show()
@@ -248,9 +298,10 @@ class GitMonitor(threading.Thread):
 						self.indicator.set_icon(os.path.join(DIRECTORY_PROJECT_ROOT, "icons/branch.png"))
 					pynotify.init("git-indicator")
 					n = pynotify.Notification("New branch %s/%s" % (dirname, branch_name), '', os.path.join(DIRECTORY_PROJECT_ROOT, "icons/branch.png"))
-					n.show ()
+					n.show()
 
-				if 'new tag' in line:
+				elif 'new tag' in line:
+					# New Tag :
 					tag_name = line.split()[3]
 					print 'New tag %s/%s' % (dirname, tag_name)
 					self.menu['items']['clear'].show()
@@ -258,9 +309,10 @@ class GitMonitor(threading.Thread):
 					self.menu['items']['repositories'][dirname].show()
 					if self.indicator.get_icon() == os.path.join(DIRECTORY_PROJECT_ROOT, "icons/fetching.png"):
 						self.indicator.set_icon(os.path.join(DIRECTORY_PROJECT_ROOT, "icons/tag.png"))
+					# TODO : notify only if checked :
 					pynotify.init("git-indicator")
 					n = pynotify.Notification("New tag %s/%s" % (dirname, tag_name), '', os.path.join(DIRECTORY_PROJECT_ROOT, "icons/tag.png"))
-					n.show ()
+					n.show()
 
 		# Clone new repositories :
 		os.chdir(DIRECTORY_MIRRORS)
@@ -270,9 +322,12 @@ class GitMonitor(threading.Thread):
 					print "Cloning %s" % (url)
 					self.menu['items']['status'].set_label("Cloning %s" % (url))
 					output = check_output(["git", "clone", "--mirror", url], stderr=STDOUT)
+					# TODO : check menu update
+					self.initialize_menu()
 				except CalledProcessError:
 					print "Error cloning %s" % url
 					print formatExceptionInfo()
+					self.menu['items']['clear'].show()
 					self.indicator.set_icon(os.path.join(DIRECTORY_PROJECT_ROOT, "icons/error.png"))
 					self.set_status_label("Error cloning %s" % url)
 					pynotify.init("git-indicator")
@@ -292,6 +347,7 @@ class GitMonitor(threading.Thread):
 
 	def clear(self, widget=None):
 		self.indicator.set_icon(os.path.join(DIRECTORY_PROJECT_ROOT, "icons/waiting.png"))
+		self.set_status_label("Up to date")
 		self.menu['items']['clear'].hide()
 		self.menu['items']['sep_top'].hide()
 		for dirname in self.menu['items']['repositories']:
@@ -399,6 +455,7 @@ class PreferencesDialog(gtk.Dialog):
 		self.builder.get_object('ok_button').set_sensitive(True)
 
 	def ok(self, widget, data=None):
+		print 'Save configuration file'
 		interval	= str(int(self.builder.get_object('rate').get_value()))
 		notifcommit	= str(self.builder.get_object('notifcommit').get_active())
 		notifbranch	= str(self.builder.get_object('notifbranch').get_active())
@@ -408,17 +465,36 @@ class PreferencesDialog(gtk.Dialog):
 		conf.read(FILE_CONFIGURATION)
 		f = open(FILE_CONFIGURATION, 'w')
 
+		# Section Purge
+		try:
+			conf.remove_section('general')
+			conf.remove_section('notification')
+			conf.remove_section('repositories')
+		except:
+			pass
+
+		conf.add_section('general')
+		conf.add_section('notification')
+		conf.add_section('repositories')
+
+
 		conf.set('general', 'interval', interval)
 
 		conf.set('notification', 'commit', notifcommit)
 		conf.set('notification', 'branch', notifbranch)
 		conf.set('notification', 'tag', notiftag)
 
+		# TODO : delete duplicate
 		for index, repository in enumerate(self.builder.get_object('repositories_list').get_model()):
+			print 'repositories %s %s' % (str(index), repository[0])
 			conf.set('repositories', str(index), repository[0])
 
 		conf.write(f)
 		f.close()
+
+		indicator.schedule_refresh(force_rate=1)
+		indicator.read_config()
+
 		self.destroy()
 
 class AddRepositoryDialog(gtk.Dialog):
