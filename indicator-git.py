@@ -80,17 +80,46 @@ class GitMonitor(threading.Thread):
 		try:
 			conf = ConfigParser.SafeConfigParser()
 			conf.read(FILE_CONFIGURATION)
+		except Exception, e:
+			traceback.format_exc(e)
+			return
+		try:
 			self.config["interval"]					= conf.getint("general", "interval")
+		except:
+			pass
+
+		try:
 			self.config["viewer"]					= conf.get("general", "viewer")
+		except:
+			pass
+		try:
 			self.config["notification"]["commit"]	= conf.getboolean("notification", "commit")
+		except:
+			pass
+		try:
 			self.config["notification"]["commit"]	= True
+		except:
+			pass
+		try:
 			self.config["notification"]["branch"]	= conf.getboolean("notification", "branch")
+		except:
+			pass
+		try:
 			self.config["notification"]["branch"]	= True
+		except:
+			pass
+		try:
 			self.config["notification"]["tag"]		= conf.getboolean("notification", "tag")
+		except:
+			pass
+		try:
 			self.config["notification"]["tag"]		= True
+		except:
+			pass
+		try:
 			self.repositories = {}
 			self.repositories = map(lambda n:n[1],sorted(conf.items("repositories")))
-			print self.repositories
+			# print self.repositories
 		except:
 			pass
 
@@ -193,13 +222,13 @@ class GitMonitor(threading.Thread):
 				print formatExceptionInfo()
 				continue
 
-
 			# Repository was deleted :
 			if url not in self.repositories:
 				os.chdir(DIRECTORY_MIRRORS)
 				print "Deleting %s/%s" % (DIRECTORY_MIRRORS, dirname)
-				self.menu['items']['status'].set_label("Deleting %s" % (dirname))
+				self.set_status_label("Deleting %s" % (dirname))
 				shutil.rmtree(dirname)
+				self.set_status_label("Up to date")
 				# TODO : check menu update
 				self.initialize_menu()
 				continue
@@ -208,7 +237,7 @@ class GitMonitor(threading.Thread):
 			repositoryName = os.path.splitext(dirname)[0]
 			dirname = os.path.splitext(dirname)[0]
 			print "Fetching %s/%s" % (DIRECTORY_MIRRORS, dirname)
-			self.menu['items']['status'].set_label("Fetching %s" % (dirname))
+			self.set_status_label("Fetching %s" % (dirname))
 
 			output = ''
 			try:
@@ -221,15 +250,6 @@ class GitMonitor(threading.Thread):
 				pynotify.init("git-indicator")
 				n = pynotify.Notification("Error fetching %s" % dirname, '', os.path.join(DIRECTORY_PROJECT_ROOT, "icons/error.png"))
 				n.show()
-
-			# DEBUG :
-			# output = 'Fetching /home/erwan/.indicator-git/mirrors/dev.teleric.net' + "\n" + \
-			# 		  'From git.teleric.net:/home/git/dev.teleric.net' + "\n" + \
- 			#		  '+ 89399ee...a291ee3 dev        -> dev  (forced update)' + "\n" + \
-   			#		  '085ff81..a291ee3  prod       -> prod' + "\n" + \
-			# 		  'New branch class/alerte' + "\n"
-
-			# print output
 
 			for line in output.split('\n'):
 				if '->' not in line:
@@ -320,8 +340,9 @@ class GitMonitor(threading.Thread):
 			if url not in urls:
 				try:
 					print "Cloning %s" % (url)
-					self.menu['items']['status'].set_label("Cloning %s" % (url))
+					self.set_status_label("Cloning %s" % (url))
 					output = check_output(["git", "clone", "--mirror", url], stderr=STDOUT)
+					self.set_status_label("Up to date")
 					# TODO : check menu update
 					self.initialize_menu()
 				except CalledProcessError:
