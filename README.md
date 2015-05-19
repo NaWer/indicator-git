@@ -11,12 +11,15 @@ WORK IN PROGRESS
 	* Branches
 	* Tags
 
+## Depends
+ * python-appindicator
+
 ## Thanks to
-* Marcin Kulik : [git-dude](http://github.com/sickill/git-dude)
-* Israel Tsadok : [git-indicator](https://github.com/itsadok/git-indicator)
+* Marcin Kulik  : [git-dude]      (http://github.com/sickill/git-dude)
+* Israel Tsadok : [git-indicator] (https://github.com/itsadok/git-indicator)
 
 
 ## License
-This source code is licensed under the MIT, which you can find in the LICENSE.txt file.
+This source code is licensed under the MIT, which you can find in the LICENSE file.
 
 The [GIT](http://git-scm.com/) logo is licensed under the [Creative Commons Attribution 3.0 Unported License](http://creativecommons.org/licenses/by/3.0/).

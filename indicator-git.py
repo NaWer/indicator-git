@@ -30,8 +30,10 @@ import gtk, gobject
 import appindicator
 import pynotify
 
+from urlparse import urlparse
 import ConfigParser
 from gettext import gettext as _
+
 # Simple Traceback :
 import traceback
 def formatExceptionInfo(maxTBlevel=5):
@@ -132,14 +134,16 @@ class GitMonitor(threading.Thread):
 		self.menu['items'] = {'repositories':{}}
 
 		os.chdir(DIRECTORY_MIRRORS)
-		for dirname in os.listdir(DIRECTORY_MIRRORS):
-			if not os.path.isdir(dirname):
+		for (path, dirs, files) in os.walk(DIRECTORY_MIRRORS):
+			if not path.endswith(".git"):
 				continue
-			repositoryName = os.path.splitext(dirname)[0]
+			if not os.path.isdir(path):
+				continue
+			repositoryName = os.path.split(os.path.splitext(path)[0])[1]
 			repo_item = gtk.MenuItem(repositoryName)
 			self.menu['gtk'].append(repo_item)
-			self.menu['items']['repositories'][repositoryName] = repo_item
-			self.menu['items']['repositories'][repositoryName].connect("activate", self.viewer, dirname)
+			self.menu['items']['repositories'][path] = repo_item
+			self.menu['items']['repositories'][path].connect("activate", self.viewer, path)
 			# TODO : count bubble like ubuntu mail notication menu
 
 		self.menu['items']['clear'] = gtk.MenuItem("Clear")
@@ -207,11 +211,15 @@ class GitMonitor(threading.Thread):
 		self.set_status_label("Fetching")
 
 		urls = []
-		for dirname in os.listdir(DIRECTORY_MIRRORS):
-			os.chdir(DIRECTORY_MIRRORS)
-			if not os.path.isdir(dirname):
+		for (path, dirs, files) in os.walk(DIRECTORY_MIRRORS):
+			if not path.endswith(".git"):
 				continue
-			os.chdir(dirname)
+			if not os.path.isdir(path):
+				continue
+
+			# TODO : dirs empty => delete ?
+
+			os.chdir(path)
 
 			# Get the remote origin url :
 			try:
@@ -225,30 +233,29 @@ class GitMonitor(threading.Thread):
 			# Repository was deleted :
 			if url not in self.repositories:
 				os.chdir(DIRECTORY_MIRRORS)
-				print "Deleting %s/%s" % (DIRECTORY_MIRRORS, dirname)
-				self.set_status_label("Deleting %s" % (dirname))
-				shutil.rmtree(dirname)
+				print "Deleting %s/%s" % (DIRECTORY_MIRRORS, path)
+				self.set_status_label("Deleting %s" % (path))
+				shutil.rmtree(path)
 				self.set_status_label("Up to date")
 				# TODO : check menu update
 				self.initialize_menu()
 				continue
 
 			# Fetch the repository :
-			repositoryName = os.path.splitext(dirname)[0]
-			dirname = os.path.splitext(dirname)[0]
-			print "Fetching %s/%s" % (DIRECTORY_MIRRORS, dirname)
-			self.set_status_label("Fetching %s" % (dirname))
+			repositoryName = os.path.split(os.path.splitext(path)[0])[1]
+			print "Fetching %s" % (repositoryName)
+			self.set_status_label("Fetching %s" % (repositoryName))
 
 			output = ''
 			try:
 				output = check_output(["git", "fetch"], stderr=STDOUT)
 			except CalledProcessError:
-				print "Error fetching %s" % dirname
+				print "Error fetching %s" % repositoryName
 				self.menu['items']['clear'].show()
 				self.indicator.set_icon(os.path.join(DIRECTORY_PROJECT_ROOT, "icons/error.png"))
-				self.set_status_label("Error fetching %s" % dirname)
+				self.set_status_label("Error fetching %s" % repositoryName)
 				pynotify.init("git-indicator")
-				n = pynotify.Notification("Error fetching %s" % dirname, '', os.path.join(DIRECTORY_PROJECT_ROOT, "icons/error.png"))
+				n = pynotify.Notification("Error fetching %s" % repositoryName, '', os.path.join(DIRECTORY_PROJECT_ROOT, "icons/error.png"))
 				n.show()
 
 			for line in output.split('\n'):
@@ -269,16 +276,16 @@ class GitMonitor(threading.Thread):
 						commit_message = check_output(["git", "log", "-1", "--format=%s", commit_hash], stderr=STDOUT)
 						commit_author = check_output(["git", "log", "-1", "--format=%an", commit_hash], stderr=STDOUT)
 
-						print 'New commit in %s/%s by %s: %s' % (dirname, branch_name, commit_author, commit_message)
+						print 'New commit in %s/%s by %s: %s' % (repositoryName, branch_name, commit_author, commit_message)
 
 						self.menu['items']['clear'].show()
 						self.menu['items']['sep_top'].show()
-						self.menu['items']['repositories'][dirname].show()
+						self.menu['items']['repositories'][path].show()
 						if self.indicator.get_icon() == os.path.join(DIRECTORY_PROJECT_ROOT, "icons/fetching.png"):
 							self.indicator.set_icon(os.path.join(DIRECTORY_PROJECT_ROOT, "icons/commit.png"))
 						# TODO : notify only if checked :
 						pynotify.init("git-indicator")
-						n = pynotify.Notification("%s: New commit in %s/%s" % (commit_author, dirname, branch_name), commit_message, os.path.join(DIRECTORY_PROJECT_ROOT, "icons/commit.png"))
+						n = pynotify.Notification("%s: New commit in %s/%s" % (commit_author, repositoryName, branch_name), commit_message, os.path.join(DIRECTORY_PROJECT_ROOT, "icons/commit.png"))
 						n.show()
 
 				elif '..' in line:
@@ -295,49 +302,61 @@ class GitMonitor(threading.Thread):
 						commit_message = check_output(["git", "log", "-1", "--format=%s", commit_hash], stderr=STDOUT)
 						commit_author = check_output(["git", "log", "-1", "--format=%an", commit_hash], stderr=STDOUT)
 
-						print 'New commit in %s/%s by %s: %s' % (dirname, branch_name, commit_author, commit_message)
+						print 'New commit in %s/%s by %s: %s' % (repositoryName, branch_name, commit_author, commit_message)
 
 						self.menu['items']['clear'].show()
 						self.menu['items']['sep_top'].show()
-						self.menu['items']['repositories'][dirname].show()
+						self.menu['items']['repositories'][path].show()
 						if self.indicator.get_icon() == os.path.join(DIRECTORY_PROJECT_ROOT, "icons/fetching.png"):
 							self.indicator.set_icon(os.path.join(DIRECTORY_PROJECT_ROOT, "icons/commit.png"))
 						# TODO : notify only if checked :
 						pynotify.init("git-indicator")
-						n = pynotify.Notification("%s: New commit in %s/%s" % (commit_author, dirname, branch_name), commit_message, os.path.join(DIRECTORY_PROJECT_ROOT, "icons/commit.png"))
+						n = pynotify.Notification("%s: New commit in %s/%s" % (commit_author, repositoryName, branch_name), commit_message, os.path.join(DIRECTORY_PROJECT_ROOT, "icons/commit.png"))
 						n.show()
 
 				elif 'new branch' in line:
 					# New branch :
 					branch_name = line.split()[3]
-					print 'New branch %s/%s' % (dirname, branch_name)
+					print 'New branch %s/%s' % (repositoryName, branch_name)
 					self.menu['items']['clear'].show()
 					self.menu['items']['sep_top'].show()
-					self.menu['items']['repositories'][dirname].show()
+					self.menu['items']['repositories'][path].show()
 					if self.indicator.get_icon() == os.path.join(DIRECTORY_PROJECT_ROOT, "icons/fetching.png"):
 						self.indicator.set_icon(os.path.join(DIRECTORY_PROJECT_ROOT, "icons/branch.png"))
 					pynotify.init("git-indicator")
-					n = pynotify.Notification("New branch %s/%s" % (dirname, branch_name), '', os.path.join(DIRECTORY_PROJECT_ROOT, "icons/branch.png"))
+					n = pynotify.Notification("New branch %s/%s" % (repositoryName, branch_name), '', os.path.join(DIRECTORY_PROJECT_ROOT, "icons/branch.png"))
 					n.show()
 
 				elif 'new tag' in line:
 					# New Tag :
 					tag_name = line.split()[3]
-					print 'New tag %s/%s' % (dirname, tag_name)
+					print 'New tag %s/%s' % (repositoryName, tag_name)
 					self.menu['items']['clear'].show()
 					self.menu['items']['sep_top'].show()
-					self.menu['items']['repositories'][dirname].show()
+					self.menu['items']['repositories'][path].show()
 					if self.indicator.get_icon() == os.path.join(DIRECTORY_PROJECT_ROOT, "icons/fetching.png"):
 						self.indicator.set_icon(os.path.join(DIRECTORY_PROJECT_ROOT, "icons/tag.png"))
 					# TODO : notify only if checked :
 					pynotify.init("git-indicator")
-					n = pynotify.Notification("New tag %s/%s" % (dirname, tag_name), '', os.path.join(DIRECTORY_PROJECT_ROOT, "icons/tag.png"))
+					n = pynotify.Notification("New tag %s/%s" % (repositoryName, tag_name), '', os.path.join(DIRECTORY_PROJECT_ROOT, "icons/tag.png"))
 					n.show()
 
 		# Clone new repositories :
-		os.chdir(DIRECTORY_MIRRORS)
 		for url in self.repositories:
 			if url not in urls:
+				os.chdir(DIRECTORY_MIRRORS)
+				path = urlparse(url).path
+				try:
+					# SSH "user@url:path"
+					path = path[path.index(':')+1:]
+				except ValueError:
+					pass
+				try:
+					os.makedirs(path)
+				except OSError:
+					# Already exist :
+					pass
+				os.chdir(path)
 				try:
 					print "Cloning %s" % (url)
 					self.set_status_label("Cloning %s" % (url))
@@ -371,8 +390,8 @@ class GitMonitor(threading.Thread):
 		self.set_status_label("Up to date")
 		self.menu['items']['clear'].hide()
 		self.menu['items']['sep_top'].hide()
-		for dirname in self.menu['items']['repositories']:
-			self.menu['items']['repositories'][dirname].hide()
+		for path in self.menu['items']['repositories']:
+			self.menu['items']['repositories'][path].hide()
 
 	def viewer(self, widget=None, dirname=None):
 		if dirname:
@@ -422,7 +441,7 @@ class GitMonitor(threading.Thread):
 		# Licence :
 		self.aboutDialog.set_copyright('Copyright %d Erwan Fournier' % date.today().year)
 		self.aboutDialog.set_wrap_license(True)
-		ifile = open(os.path.join(DIRECTORY_PROJECT_ROOT, "LICENSE.txt"), "r")
+		ifile = open(os.path.join(DIRECTORY_PROJECT_ROOT, "LICENSE"), "r")
 		self.aboutDialog.set_license(ifile.read().replace('\x0c', ''))
 		ifile.close()
 		self.aboutDialog.set_website("https://github.com/NaWer/indicator-git")
